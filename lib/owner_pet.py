@@ -27,9 +27,7 @@ class Owner:
         pet.owner = self
 
     def get_sorted_pets(self):
-        breakpoint()
-        i = 0
-        new_list = []
-        while i < len(Pet.all):
-            new_list.append(sorted(Pet.all[i]))
-        return new_list
+        # Sort the Pet.all list by name
+        sorted_pets = sorted(Pet.all, key=lambda pet: pet.name)
+        return sorted_pets
+        
